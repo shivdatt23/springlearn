@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <context:annotation-config></context:annotation-config>
+<!--    implementation  of lifcycle using init and destroy method through xml configuration-->
+    <bean class="com.springcore.lifecycle.Pepsi" id="p1">
+        <property name="pric" value="90.43"/>
+    </bean>
+   <bean class="com.springcore.lifecycle.Samosa" id="samosa" init-method="init" destroy-method="destroys">
+       <property value="30" name="price"/>
+   </bean>
+
+    <bean id="exam1" class="com.springcore.lifecycle.Examination" >
+        <property name="subject" value="java pragoramming"/>
+            </bean>
+<!--    the below bean is for the annotation to be activate in java class-->
+    <bean class="org.springframework.context.annotation.CommonAnnotationBeanPostProcessor"/>
+</beans>

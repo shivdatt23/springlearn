@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean id="certi" class="com.springcore.ci.Certi" c:name="Adroid is for everyone using java">
+<!--    <constructor-arg value="Android using Kotlin"/>-->
+    </bean>
+    <bean id="person1" class="com.springcore.ci.Person">
+<!--        <constructor-arg><value>shivdatt bibhar</value></constructor-arg>-->
+        <constructor-arg value="shivdatt"/>
+        <constructor-arg value="20"/>
+        <constructor-arg ref="certi" />
+        <constructor-arg>
+            <list>
+                <value>39393939</value>
+                <value>393939365</value>
+                <value>393939335</value>
+            </list>
+        </constructor-arg>
+
+    </bean>
+    <bean id="person2" class="com.springcore.ci.Person" c:personName="brahma" c:personId="200" c:certi-ref="certi" c:p_number=""/>
+<bean class="com.springcore.ci.Addition" name="addition">
+    <constructor-arg value="883" type="int" index="1"/>
+    <constructor-arg value="23" type="int" index="0"/>
+
+</bean >
+
+
+
+</beans>

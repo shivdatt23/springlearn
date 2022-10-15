@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+    <bean class="com.springcore.Student"  id="student1">
+        <property name="studentId">
+            <value>123</value>
+        </property>
+        <property name="studentName">
+            <value>SHIVDATT BIBHAR</value>
+        </property>
+        <property name="studentAddress">
+            <value>Kesinga</value>
+        </property>
+    </bean>
+    <bean id="student2" class="com.springcore.Student">
+        <property name="studentId">
+            <value>124</value>
+        </property>
+        <property name="studentName">
+            <value>BRAHMANANDA BEHERA
+            </value>
+        </property>
+        <property name="studentAddress">
+            <value>BHUBANESWAR</value>
+        </property>
+    </bean>
+        <bean id="student3" class="com.springcore.Student">
+            <property name="studentId">
+                <value>125</value>
+            </property>
+            <property name="studentName">
+                <value>SHREERAM MALLICK</value>
+            </property>
+            <property name="studentAddress">
+                <value>126</value>
+
+            </property>
+        </bean>
+<!--    injection of value as attribute-->
+    <bean id="student4" class="com.springcore.Student">
+        <property name="studentId" value="127"/>
+        <property name="studentName" value="PRADYUMNA NAIK"/>
+        <property name="studentAddress" value="KALAMPUR"/>
+    </bean>
+<!--    injecting object through p schema-->
+    <bean id="student5" class="com.springcore.Student" p:studentId="128" p:studentName="RITIK PATEL" p:studentAddress="SUNDARGARH"/>
+</beans>
